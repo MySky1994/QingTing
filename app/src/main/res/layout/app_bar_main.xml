@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lfq.zzuli.qingtingmusic.activity.MainActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+            <!--//添加TabLayout控件-->
+            <!--  属相依次为：下方滚动的下划线颜色 // tab被选中后，文字的颜色 // tab默认的文字颜色-->
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#8f4ae3"
+                app:tabIndicatorColor="#ffffff"
+                app:tabSelectedTextColor="#ffffff"
+                app:tabTextColor="#042cf5" />
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <include layout="@layout/content_main" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@android:drawable/ic_dialog_email" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <fragment
+    android:id="@+id/fragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:name="com.lfq.zzuli.qingtingmusic.fragment.MusicPlayerFragment"/>
+
+    <!--<include layout="@layout/music_play_control"/>-->
+
+
+ <!--   <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#2d2c2c"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_gravity="bottom"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textView_songName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="歌名"
+                android:textColor="@android:color/white"
+                />
+
+            <TextView
+                android:id="@+id/textView2_singer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="歌手"
+                android:textColor="@android:color/white"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/imageView1_play_previous"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="15dp"
+                android:src="@mipmap/ic_skip_previous_white_48dp"/>
+            <ImageView
+                android:id="@+id/imageView2_play_pause"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/uamp_ic_play_arrow_white_48dp"
+                />
+            <ImageView
+                android:id="@+id/imageView3_next"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/ic_skip_next_white_48dp"/>
+
+        </LinearLayout>
+    </LinearLayout>-->
+
+</LinearLayout>
